@@ -1,5 +1,5 @@
 # Projektne faze
-- [ ] - Opis projekta
+- [x] - Opis projekta
 - [ ] - Početna struktura aplikacije
 - [ ] - Prototip
 - [ ] - Konzultacije
@@ -8,12 +8,13 @@
 
 # Opis projekta
 ## Kratki opis
-Ovdje ide opis projekta
+Tema projekta je izrada mobilne aplikacije sa receptima. Dakle, aplikacija će sadržavati recepte, ali će se moći unijeti i novi recepti. Unešeni recepti će se moći kategorizirati po vrsti jela (juha, predjelo, glavno jelo..). Omiljenim receptima će se moći postaviti oznaka favorita kako bi nam bili lakše dostupni. Neželjene recepte će se moći izbrisati.
 
 ## Popis funkcionalnosti
-1. a
-2. b
-3. c
+1. Pregled recepata
+2. Dodavanje novih recepata
+3. Filtriranje recepata (po vrsti, po omiljenosti)
+4. Brisanje recepata
 
 
 ## UPUTE
