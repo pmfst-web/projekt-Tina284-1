@@ -13,3 +13,9 @@ Pocetak | Kraj
 15:10   | 15:20
 ### Kratki opis promjena
 Dodan opis projekta i popis funkcionalnosti.
+
+## 12.05.2023.
+Pocetak | Kraj
+------- | ----
+13:40   | 
+### Kratki opis promjena
