@@ -17,5 +17,7 @@ Dodan opis projekta i popis funkcionalnosti.
 ## 12.05.2023.
 Pocetak | Kraj
 ------- | ----
-13:40   | 
+13:40   | 17:50
 ### Kratki opis promjena
+Početak rada na projektu. 
+Dodavanje screenova, izrada komponente _Botun.js_, dodavanje kostante _Boje.js_
