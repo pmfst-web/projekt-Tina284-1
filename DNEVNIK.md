@@ -21,3 +21,9 @@ Pocetak | Kraj
 ### Kratki opis promjena
 Početak rada na projektu. 
 Dodavanje screenova, izrada komponente _Botun.js_, dodavanje kostante _Boje.js_
+
+## 04.06.2023.
+Pocetak | Kraj
+------- | ----
+09:00   | 
+### Kratki opis promjena
