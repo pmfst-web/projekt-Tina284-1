@@ -25,5 +25,6 @@ Dodavanje screenova, izrada komponente _Botun.js_, dodavanje kostante _Boje.js_
 ## 04.06.2023.
 Pocetak | Kraj
 ------- | ----
-09:00   | 
+09:00   | 20:00
 ### Kratki opis promjena
+Rad na projektu. Dodavanje screenova i centralnog spremnika, izmjena prethodne verzije..
