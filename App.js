@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Button, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -37,24 +37,15 @@ const glavniReducer = combineReducers({
 // Stvaramo centralni spremnik
 const store = createStore(glavniReducer);
 
-const tabImenik = () => {
-  return (
-    <Tab.Navigator>
-      <Tab.Screen name="svi" component={PopisEkran} initialParams={['svi']}/>
-      <Tab.Screen name="favoriti" component={PopisEkran} initialParams={['favoriti']}/>
-    </Tab.Navigator>
-  );
-};
-
 const drawerImenik = () => {
   return (
     <Drawer.Navigator>
       <Drawer.Screen name="Sva jela" component={PopisEkran} initialParams={{prikaz: 'svi'}}/>
       <Drawer.Screen name="Omiljena jela" component={PopisEkran} initialParams={{prikaz: 'favoriti'}}/>
-      <Drawer.Screen name="Juhe" component={PopisEkran}/>
-      <Drawer.Screen name="Predjelo" component={PopisEkran}/>
-      <Drawer.Screen name="Glavno jelo" component={PopisEkran}/>
-      <Drawer.Screen name="Desert" component={PopisEkran}/>
+      <Drawer.Screen name="Juhe" component={PopisEkran} initialParams={{prikaz: 'juhe'}}/>
+      <Drawer.Screen name="Predjelo" component={PopisEkran} initialParams={{prikaz: 'predjela'}}/>
+      <Drawer.Screen name="Glavno jelo" component={PopisEkran} initialParams={{prikaz: 'glavnaJela'}}/>
+      <Drawer.Screen name="Desert" component={PopisEkran} initialParams={{prikaz: 'deserti'}}/>
     </Drawer.Navigator>
   );
 };
@@ -114,8 +105,8 @@ function App() {
             name="Detalji"
             component={DetaljiEkran}
             options={({ route, navigation }) => {
-              const idOsobe = Number(route.params.id);
-              const recept = RECEPTI.find((r) => r.id === idOsobe);
+              const idRecepta = Number(route.params.id);
+              const recept = RECEPTI.find((r) => r.id === idRecepta);
               return {
                 headerTitle: recept?.naslov,
                 headerRight: () => {
