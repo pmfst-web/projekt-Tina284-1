@@ -1,23 +1,22 @@
+//početni ekran pri pokretanju aplikacije
 import * as React from 'react';
-import { View, Text, StyleSheet, Button, Image, ScrollView } from 'react-native';
-import Botun from '../components/Botun';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import Tipka from '../components/Tipka'
 import Boje from '../constants/Boje'
 
-const PocetniEkran = () => {
+const PocetniEkran = ({ navigation }) => {
   return (
+
     <ScrollView vertical={true} style={stil.ekran}>
-      <View>
-        <Text>Neki tekst</Text>
-        <View style={stil.kontrole}>
-        <Botun
+      <View style={stil.kontrole}>
+        <Tipka
           title="Moji recepti"
-          onPress={() => navigation.navigate('Recepti')}
+          onPress={() => navigation.navigate('Popis')}
         />
-        <Botun
+        <Tipka
           title="Novi recept"
           onPress={() => navigation.navigate('Unos')}
         />
-      </View>
       </View>
     </ScrollView>
   );
@@ -29,6 +28,12 @@ const stil = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor : Boje.Pozadina,
   },
+  kontrole:{
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "space-around",
+    height: 100
+  }
 });
 
 export default PocetniEkran;
