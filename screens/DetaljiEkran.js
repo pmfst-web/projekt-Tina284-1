@@ -1,20 +1,27 @@
+//ekran s detaljima o pojedinom receptu
 import React, {useCallback, useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux'
 import {promjenaFavorita} from '../store/actions/recepti'
-import { View, Text, StyleSheet, Button } from 'react-native';
+import {brisanjeRecepta} from '../store/actions/brisanjeRecepta'
+import { View, Text, StyleSheet } from 'react-native';
 import Boje from '../constants/Boje';
 import Tipka from '../components/Tipka'
 
 const DetaljiEkran = ({ route, navigation }) => {
 
   const idRecepta = Number(route.params.id);
-  const sviRecepti = useSelector(state => state.recepti.recepti)
+  const sviRecepti = useSelector(state => state.recepti.filterRecepti.concat(state.recepti.recepti).concat(state.recepti.dodaniRecepti))
+  console.log(sviRecepti)
   const recept = sviRecepti.find((r) => r.id === idRecepta);
 
   const dispatch = useDispatch()
 
   const akcijaFavorit = () =>{
     dispatch(promjenaFavorita(idRecepta))
+  }
+
+  const akcijaBrisanje = () =>{
+    dispatch(brisanjeRecepta(idRecepta))
   }
   
 
@@ -54,6 +61,11 @@ const DetaljiEkran = ({ route, navigation }) => {
         <View style={stil.redak}>
           <View style={stil.stupac}>
             <Tipka title="Promjena favorita" onPress={akcijaFavorit}/>
+          </View>
+        </View>
+        <View style={stil.redak}>
+          <View style={stil.stupac}>
+            <Tipka title="Izbriši" onPress={akcijaBrisanje}/>
           </View>
         </View>
       </View>
