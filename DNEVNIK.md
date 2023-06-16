@@ -28,3 +28,17 @@ Pocetak | Kraj
 09:00   | 20:00
 ### Kratki opis promjena
 Rad na projektu. Dodavanje screenova i centralnog spremnika, izmjena prethodne verzije..
+
+## 15.06.2023.
+Pocetak | Kraj
+------- | ----
+19:00   | 22:00
+### Kratki opis promjena
+Rad na projektu. 
+
+## 16.06.2023.
+Pocetak | Kraj
+------- | ----
+11:00   | 18:30
+### Kratki opis promjena
+Rad na projektu. Omogućavanje filtriranja, unosa i brisanja podataka. Izmjene prethodne verzije. Završne promjene.
